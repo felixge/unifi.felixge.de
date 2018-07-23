@@ -1,0 +1,22 @@
+- hosts: '*'
+  tasks:
+  - name: add unifi apt source
+    copy:
+      content: "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti\n"
+      dest: /etc/apt/sources.list.d/100-ubnt-unifi.list
+  - name: add unifi apt key
+    apt_key:
+      keyserver: keyserver.ubuntu.com
+      id: 06E85760C0A52C50
+  - name: install java
+    apt:
+      name: openjdk-8-jre-headless
+      update_cache: true
+  - name: install unifi
+    apt:
+      name: unifi
+      update_cache: true
+  - name: install htop
+    apt:
+      name: htop
+      update_cache: true

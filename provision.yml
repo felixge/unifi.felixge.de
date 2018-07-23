@@ -1,0 +1,5 @@
+- hosts: '*'
+  gather_facts: no
+  pre_tasks:
+    - name: 'install python2'
+      raw: sudo bash -c 'apt-get -y install && apt-get -y install python-simplejson'
