@@ -1,4 +1,5 @@
 - hosts: '*'
+  become: yes
   tasks:
   - name: add unifi apt source
     copy:
