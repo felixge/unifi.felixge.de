@@ -12,10 +12,16 @@
     apt:
       name: openjdk-8-jre-headless
       update_cache: true
-  - name: install unifi
+  # see https://community.ubnt.com/t5/UniFi-Wireless/Ubuntu-14-04-x64-Unifi-4-6-6-very-slow-start-up/m-p/1355803/highlight/true#M121840
+  - name: install haveged
+    apt:
+      name: haveged
+      update_cache: true
+  - name: install or upgrade unifi
     apt:
       name: unifi
       update_cache: true
+      state: latest
   - name: install htop
     apt:
       name: htop
