@@ -8,7 +8,7 @@
     <string>unifi.felixge.de</string>
     <key>ProgramArguments</key>
     <array>
-      <string>vagrant</string>
+      <string>/usr/local/bin/vagrant</string>
       <string>up</string>
     </array>
     <key>RunAtLoad</key>
@@ -18,8 +18,8 @@
     <key>WorkingDirectory</key>
     <string>/Users/server/Server/unifi.felixge.de</string>
     <key>StandardErrorPath</key>
-    <string>/usr/local/var/log/unifi.felixge.de.log</string>
+    <string>/Users/server/Server/launchd.log</string>
     <key>StandardOutPath</key>
-    <string>/usr/local/var/log/unifi.felixge.de.log</string>
+    <string>/Users/server/Server/launchd.log</string>
   </dict>
 </plist>
